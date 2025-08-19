@@ -1,5 +1,6 @@
 ## Git Commit 代码检测
 
+将 `.pre-commit-config.yaml` 和 `.semgrep.yml` 两个配置文件放项目根目录
 ### 安装
 
 1. **安装 Python3**：访问 [Python 官网](https://www.python.org/getit/) 下载并安装 Python3。在安装过程中，请确保勾选 "Add python.exe to PATH" 选项。
