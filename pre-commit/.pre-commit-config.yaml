@@ -1,0 +1,12 @@
+repos:  # 定义 pre-commit 钩子的仓库列表
+  - repo: local  # 使用本地钩子
+    hooks:
+      - id: semgrep  # 钩子的唯一标识符
+        name: Semgrep scan  # 钩子的名称，会在执行时显示
+        language: system  # 使用系统环境中的命令（即已安装的 Semgrep）
+        entry: semgrep --config .semgrep.yml --severity ERROR --error  #仅检测ERROR级别
+        # entry: semgrep --config .semgrep.yml --error    #检测所有级别
+        always_run: true
+        pass_filenames: false
+        stages: [commit]
+        fail_fast: true
