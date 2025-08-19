@@ -32,7 +32,7 @@
   semgrep --config=.semgrep.yml
   ```
 
-- **运行 Pre-commit 检查所有文件**：
+- **（可选）运行 Pre-commit 检查所有文件**：
   ```bash
   pre-commit run --all-files
   ```
@@ -49,4 +49,22 @@
 - 检测 Warning 和 Error 级别问题：
   ```bash
   entry: semgrep --config .semgrep.yml --error
+  ```
+
+- **stages 配置项**：
+  该配置项用于指定钩子在哪些 Git 阶段运行。可填的选项包括：
+  - `commit`：在 git commit 时运行
+  - `merge-commit`：在 git merge 时运行
+  - `push`：在 git push 时运行
+  - `prepare-commit-msg`：在准备提交信息时运行
+  - `commit-msg`：在提交信息时运行
+  - `post-commit`：在提交后运行
+  - `post-merge`：在合并后运行
+  - `post-checkout`：在检出后运行
+  - `post-rewrite`：在重写后运行
+  - `pre-rebase`：在变基前运行
+  
+  示例配置：
+  ```yaml
+  stages: [commit, push]
   ```
