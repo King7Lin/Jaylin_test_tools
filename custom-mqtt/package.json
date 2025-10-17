@@ -1,0 +1,104 @@
+{
+  "name": "react-native-mqtt-hooks",
+  "version": "2.0.0",
+  "description": "React Native的MQTT客户端，使用Hooks API实现。提供简单易用的接口来连接、发布和订阅MQTT消息，支持通用和业务特定两种使用模式。",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "config.js",
+    "utils.js",
+    "mqtt.js",
+    "MQTTContext.js",
+    "MQTTContext.jsx",
+    "extensions/",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "keywords": [
+    "react-native",
+    "mqtt",
+    "hooks",
+    "websocket",
+    "iot",
+    "messaging",
+    "realtime",
+    "context",
+    "provider"
+  ],
+  "author": "Your Name <your.email@example.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/react-native-mqtt-hooks.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/react-native-mqtt-hooks/issues"
+  },
+  "homepage": "https://github.com/yourusername/react-native-mqtt-hooks#readme",
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-native": ">=0.60.0"
+  },
+  "dependencies": {
+    "mqtt": "^4.3.7 || ^5.0.0",
+    "prop-types": "^15.7.2"
+  },
+  "optionalDependencies": {
+    "crypto-js": "^4.1.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.0",
+    "@types/react-native": "^0.70.0",
+    "eslint": "^8.0.0",
+    "eslint-plugin-react": "^7.32.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "jest": "^29.0.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "react-native": {
+    "crypto": false,
+    "stream": false,
+    "buffer": false
+  },
+  "jest": {
+    "preset": "react-native",
+    "testMatch": [
+      "**/__tests__/**/*.js",
+      "**/?(*.)+(spec|test).js"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "eslint:recommended",
+      "plugin:react/recommended",
+      "plugin:react-hooks/recommended"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 2021,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": true
+      }
+    },
+    "env": {
+      "node": true,
+      "es6": true,
+      "react-native/react-native": true
+    },
+    "settings": {
+      "react": {
+        "version": "detect"
+      }
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ]
+}
