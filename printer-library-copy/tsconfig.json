@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "es2019",
+    "module": "commonjs",
+    "declaration": true,
+    "outDir": "dist",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "moduleResolution": "node",
+    "jsx": "react-jsx"
+  },
+  "include": ["src/**/*"],
+  "exclude": ["dist", "example", "node_modules"]
+}

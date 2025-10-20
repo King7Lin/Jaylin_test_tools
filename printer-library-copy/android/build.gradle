@@ -1,0 +1,32 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    namespace "com.rnescpos"
+    compileSdkVersion 34
+    defaultConfig {
+        minSdkVersion 23
+        targetSdkVersion 34
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+    buildTypes { release { minifyEnabled false } }
+}
+
+dependencies {
+    implementation 'com.facebook.react:react-android:0.74.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.9.0"
+    implementation 'androidx.core:core-ktx:1.12.0'
+    implementation 'com.github.mik3y:usb-serial-for-android:3.5.1'
+    compileOnly files("${rootProject.projectDir}/app/libs/printer-lib-3.4.5.aar")
+    compileOnly files("${rootProject.projectDir}/app/libs/ePOS2.jar")
+    // XPrinter SDK AAR 文件 - 根据构建类型选择依赖方式
+    // if (project.gradle.startParameter.taskNames.any { it.contains('assemble') && it.contains('Release') }) {
+    //     // 正式包构建时使用 compileOnly，避免 AAR 嵌套问题
+    //     compileOnly files('libs/printer-lib-3.4.5.aar')
+    // } else {
+    //     // 开发构建时使用 implementation，确保运行时可用
+    //     implementation files('libs/printer-lib-3.4.5.aar')
+    // }
+}
