@@ -1,0 +1,55 @@
+buildscript {
+    ext.kotlin_version = '1.7.0'
+    
+    repositories {
+        google()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+
+android {
+    compileSdkVersion 33
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 33
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+
+repositories {
+    google()
+    mavenCentral()
+}
+
+dependencies {
+    implementation "com.facebook.react:react-native:+"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    
+    // Java-WebSocket library for WebSocket server
+    implementation 'org.java-websocket:Java-WebSocket:1.5.3'
+}
+

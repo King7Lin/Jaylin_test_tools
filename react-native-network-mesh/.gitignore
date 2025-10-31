@@ -1,0 +1,33 @@
+# Node
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Android
+android/build/
+android/.gradle/
+android/app/build/
+*.iml
+.gradle
+local.properties
+
+# iOS
+ios/Pods/
+ios/*.xcworkspace
+ios/*.xcuserdata
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Misc
+*.log
+.env
+

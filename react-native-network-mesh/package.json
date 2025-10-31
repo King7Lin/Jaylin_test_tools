@@ -1,0 +1,38 @@
+{
+  "name": "react-native-network-mesh",
+  "version": "1.0.0",
+  "description": "A React Native library for local network device discovery and communication using UDP broadcast and WebSocket",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react-native",
+    "network",
+    "mesh",
+    "websocket",
+    "udp",
+    "lan",
+    "device-discovery",
+    "p2p"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
+  },
+  "dependencies": {
+    "react-native-get-random-values": "^1.9.0",
+    "react-native-network-info": "^5.2.1",
+    "react-native-udp": "^4.1.3",
+    "uuid": "^9.0.0",
+    "crypto-js": "^4.2.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/react-native-network-mesh.git"
+  }
+}
+
